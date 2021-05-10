@@ -21,6 +21,7 @@
     "@nuxtjs/axios": "^5.13.1",
     "@vant/area-data": "^1.1.1",
     "cross-env": "^5.2.0",
+    "node-sass": "^4.0.0",
     "express": "^4.16.3",
     "nuxt": "^2.0.0",
     "vant": "^2.12.15"
@@ -36,7 +37,6 @@
     "eslint-loader": "^2.0.0",
     "eslint-plugin-vue": "^4.0.0",
     "express-session": "^1.15.6",
-    "node-sass": "^4.9.4",
     "less": "^3.12.2",
     "less-loader": "^7.0.2",
     "nodemon": "^1.11.0",
