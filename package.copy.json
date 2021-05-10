@@ -1,0 +1,55 @@
+{
+  "name": "baijian-mobile",
+  "version": "1.0.0",
+  "description": "Nuxt.js project",
+  "author": "pms",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env MODE=dev nuxt --open",
+    "server:dev": "cross-env MODE=dev nuxt",
+    "server:test": "cross-env MODE=test nuxt",
+    "server:prod": "cross-env MODE=prod nuxt",
+    "build:dev": "cross-env MODE=dev nuxt build",
+    "build:test": "cross-env MODE=test nuxt build",
+    "build": "cross-env MODE=prod nuxt build",
+    "start": "cross-env MODE=prod nuxt start",
+    "generate:test": "cross-env MODE=test nuxt generate",
+    "generate": "cross-env MODE=prod nuxt generate",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.12.2",
+    "@vant/area-data": "^1.1.1",
+    "cross-env": "^7.0.2",
+    "express": "^4.16.3",
+    "nuxt": "^2.14.6",
+    "vant": "^2.12.15"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.2.1",
+    "babel-eslint": "^8.2.1",
+    "compression-webpack-plugin": "^2.0.0",
+    "connect-redis": "^3.4.0",
+    "echarts": "^4.2.0-rc.2",
+    "eslint": "^5.0.1",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-vue": "^4.0.0",
+    "express-session": "^1.15.6",
+    "node-sass": "^4.9.4",
+    "less": "^3.12.2",
+    "less-loader": "^7.0.2",
+    "nodemon": "^1.11.0",
+    "pm2": "^3.2.2",
+    "qs": "^6.9.4",
+    "postcss-pxtorem": "^4.0.1",
+    "sass-loader": "^7.1.0",
+    "uglifyjs-webpack-plugin": "^2.0.1"
+  },
+  "config": {
+    "nuxt": {
+      "host": "0.0.0.0",
+      "port": "9528"
+    }
+  }
+}
