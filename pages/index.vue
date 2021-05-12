@@ -109,7 +109,7 @@ export default {
     let [listA, listB, listC] = await Promise.all([
       $axios.get('/mall-service/userService/news/queryIndexPageNews'),
       $axios.get('/mall-service/userService/consultQuote/queryConsultQuotePage'),
-      $axios.get('/mall-service/userService/standardBanner/getIndexPageBanner'),
+      $axios.get('/mall-service/userService/standardBanner/getIndexPageBanner?page=1&pageSize=5&bannerRange=2&bannerPois=1'),
     ])
     let resData = listA.data
     const info = [{
@@ -212,7 +212,7 @@ export default {
     },
     getList() {
       getList().then((res) => {
-        console.log(res, "111111");
+        // console.log(res, "111111");
         const resData = res.data;
         let arr = [];
         this.info.forEach((item, index) => {
@@ -229,7 +229,7 @@ export default {
           });
         });
         this.newsList = arr;
-        console.log(arr, "000000000");
+        // console.log(arr, "000000000");
         this.serverList = resData.testServerNews;
       });
     },

@@ -3,7 +3,7 @@
     <div class="title">{{ cardInfo.title }}</div>
     <div class="info">
       <span class="source">百检网</span>
-      <span class="date">{{ cardInfo.date }}</span>
+      <span class="date">{{ cardInfo.date.substring(0, 10) }}</span>
     </div>
   </div>
 </template>

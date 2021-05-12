@@ -33,10 +33,9 @@
       <span class="partners" @click="hangGoBaiJian">百检检测</span>
     </div>
     <div class="comTag">
-      <span class="text">百检（上海)信息科技有限公司</span>
-      <span class="text">ICP备19010749号经营许可证编号:沪B2-20190666</span>
-      <span class="text">Copyright@2019 www.bajiantest.com All Rights Reserved</span>
-
+      <span class="text">百检集团</span>
+      <span class="text" @click="handleGoPage('')">ICP备19010749号经营许可证编号:沪B2-20190666</span>
+      <span class="text" @click="handleGoPage('')">Copyright@2019 www.bajiantest.com All Rights Reserved</span>
     </div>
   </div>
 </template>
@@ -48,9 +47,12 @@ export default {
   name: "seoBottom",
   methods: {
     handleGoPage(url) {
-      this.$router.push({
-        name: url
-      })
+      if (url){
+        this.$router.push({
+          name: url
+        })
+      } else
+        this.$router.push('/')
     },
     hangGoBaiJian(){
       location.href = 'http://www.bjwpt.cn'

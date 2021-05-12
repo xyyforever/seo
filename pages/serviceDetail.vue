@@ -70,7 +70,7 @@ export default {
   },
   head() {
     return {
-      title: this.info.newTitle,
+      title: this.info.newTitle + '-百检网',
       meta: [
         {
           hid: 'description',

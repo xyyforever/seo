@@ -46,13 +46,12 @@ export default {
   watchQuery: ['newId'],
   head() {
     return {
-      title: this.info.newTitle,
+      title: this.info.newTitle + '-百检网',
       meta: [
         {
           hid: 'description',
           name: 'description',
           content: this.info.description
-
         },
         {
           hid: 'keywords',
@@ -63,7 +62,7 @@ export default {
     }
   },
   async asyncData({query, $axios}) {
-    console.log(query, $axios, 'envkkkkk')
+    // console.log(query, $axios, 'envkkkkk')
     let [listA] = await Promise.all([
       $axios.get('/mall-service/userService/news/getNewsDetail?news_id=' + query.newId || 0),
     ])
@@ -122,7 +121,7 @@ export default {
       getNewsDetail({news_id: this.newId}).then(res => {
         const resData = res.data
         this.info = resData
-        console.log(resData, 'res')
+        // console.log(resData, 'res')
       })
     },
     getNewsRelated() {
@@ -132,7 +131,7 @@ export default {
       }).then(res => {
         const resData = res.data
         this.list = resData.records
-        console.log(res, 11111)
+        // console.log(res, 11111)
       })
     },
     getType() {

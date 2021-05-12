@@ -21,8 +21,8 @@
     "@nuxtjs/axios": "^5.13.1",
     "@vant/area-data": "^1.1.1",
     "cross-env": "^5.2.0",
-    "node-sass": "^4.0.0",
     "express": "^4.16.3",
+    "node-sass": "^4.0.0",
     "nuxt": "^2.0.0",
     "vant": "^2.12.15"
   },
@@ -49,7 +49,7 @@
   "config": {
     "nuxt": {
       "host": "0.0.0.0",
-      "port": "9528"
+      "port": "8001"
     }
   }
 }

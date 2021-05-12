@@ -100,11 +100,14 @@ export default {
       ],
     }
   },
+  mounted() {
+    console.log('qwe', this.$router)
+  },
   methods: {
     handleSelectArea(item) {
       console.log(item, 'item')
       this.areaValue = item
-      this.areaText = item[0].name + item[1].name
+      this.areaText = item[0].name + '/' + item[1].name
       this.showArea = false;
     },
     handleTimeSelect(item) {
@@ -133,7 +136,8 @@ export default {
         province: this.areaValue[1]?.name || '',
         reportTime: this.baoGaoValue || '',
         name: this.name,
-        mobile: this.phone
+        mobile: this.phone,
+        source: 'H5'
       }
       let res = await this.$axios.post('/mall-service/userService/consultQuote/insertConsultQuote',params);
       // insertConsultQuote(params).then(res => {
@@ -143,14 +147,10 @@ export default {
       console.log(res)
       if(res.code == 200){
         Toast('提交成功')
-        this.$router.push({
-          name: '/'
-        })
+        this.$router.push('/')
       } else {
         Toast('提交失败')
-        this.$router.push({
-          name: '/'
-        })
+        this.$router.push('/')
       }
     },
 
