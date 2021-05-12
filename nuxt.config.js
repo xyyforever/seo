@@ -67,8 +67,8 @@ components: true,
   ],
   // 所有页面添加鉴权
   router: {
-    base: "/",//此为根目录，如果有具体目录需求按实际情况写
-    // middleware: ['midd']
+    // base: "/",//此为根目录，如果有具体目录需求按实际情况写
+    middleware: ['midd']
   },
   /*
    ** Axios module configuration

@@ -12,7 +12,7 @@ module.exports = {
     prod: {
       MODE: "prod",
       BASE_URL: "http://gateway.baijiantest.com", // 服务端请求地址
-      PC_URL: 'http://seo-pc.baijiantest.com' //  pc站地址
+      PC_URL: 'http://baijiantest.com' //  pc站地址
     }
   };
 
